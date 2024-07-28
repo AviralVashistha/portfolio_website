@@ -333,7 +333,7 @@ span {
     margin-bottom: 5rem;
     color: white;
 }
-.book-container {
+.library-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -488,7 +488,7 @@ padding-bottom: 7rem;
 grid-template-columns: repeat(2,1fr);
 margin: 0 5rem;
 }
-.book-container{
+.library-container{
 padding-bottom: 7rem;
 grid-template-columns: repeat(2,1fr);
 margin: 0 5rem;
@@ -501,6 +501,9 @@ section{
 padding: 10rem 3% 2rem;
 }
 .projects{
+padding-bottom: 7rem;
+}
+.library{
 padding-bottom: 7rem;
 }
 .footer{
@@ -569,7 +572,7 @@ grid-template-columns: repeat(1,1fr);
 .library h2{
 margin-bottom: 3rem;
 }
-.book-container{
+.library-container{
 grid-template-columns: repeat(1,1fr);
 }
 }
