@@ -299,7 +299,7 @@ span {
     transition: 0.3s ease-in-out;
 }
 .project-box:hover {
-    background: white;
+    background: black;
     color: var(--main-color);
     transform: scale(1.03);
 }
@@ -348,7 +348,7 @@ span {
     transition: 0.3s ease-in-out;
 }
 .book-box:hover {
-    background: white;
+    background: black;
     color: var(--main-color);
     transform: scale(1.03);
 }
