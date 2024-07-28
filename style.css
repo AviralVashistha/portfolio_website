@@ -488,6 +488,11 @@ padding-bottom: 7rem;
 grid-template-columns: repeat(2,1fr);
 margin: 0 5rem;
 }
+.book-container{
+padding-bottom: 7rem;
+grid-template-columns: repeat(2,1fr);
+margin: 0 5rem;
+}
 } @media(max-width:991px){
 header{
 padding: 2rem 3%;
@@ -558,6 +563,13 @@ margin-bottom: 3rem;
 margin-bottom: 3rem;
 }
 .projects-container{
+grid-template-columns: repeat(1,1fr);
+}
+}
+.library h2{
+margin-bottom: 3rem;
+}
+.book-container{
 grid-template-columns: repeat(1,1fr);
 }
 }
