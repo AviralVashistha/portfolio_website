@@ -323,6 +323,56 @@ span {
     max-height: 100px;
     margin: auto;
 }
+
+
+.library {
+    background: var(--bg-color);
+    color: white;
+}
+.library h2 {
+    margin-bottom: 5rem;
+    color: white;
+}
+.library-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.book-box {
+    background-color: var(--main-color);
+    color: black;
+    height: 250px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.book-box:hover {
+    background: white;
+    color: var(--main-color);
+    transform: scale(1.03);
+}
+.book-box .book-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: center; 
+    align-items: baseline;
+    padding: 5em;
+}
+.book-info h4 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.book-info p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+    margin: auto;
+}
+
 .contact{
 background-color: var(--second-bg-color);
 }
