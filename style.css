@@ -276,53 +276,145 @@ span {
     background-color: var(--bg-color);
     width: 50px;
 }
-.projects {
-    background: var(--bg-color);
-    color: white;
+
+
+.heading{
+font-size: 8rem; 
+text-align: center;
+margin: 5rem 0;
 }
-.projects h2 {
-    margin-bottom: 5rem;
-    color: white;
+.education{
+padding: 100px 15px;
+background: var(--second-bg-color);
 }
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
+.education h2{
+margin-bottom: 5rem;
 }
-.project-box {
-    background-color: var(--main-color);
-    color: black;
-    height: 250px;
-    border-radius: 3rem;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
+.timeline-items{
+max-width: 1200px;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+position: relative;
 }
-.project-box:hover {
-    background: black;
-    color: var(--main-color);
-    transform: scale(1.03);
+.timeline-items::before{
+content: "";
+position: absolute;
+width: 5px;
+height: 100%;
+background-color: var(--main-color);
+left: calc(50% - 1px);
 }
-.project-box .project-info {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    max-height: 200px;
-    justify-content: center; 
-    align-items: baseline;
-    padding: 5em;
+.timeline-item{
+margin-bottom: 40px;
+width: 100%;
+position: relative;
 }
-.project-info h4 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
+.timeline-item:last-child{ margin-bottom: 0;
 }
-.project-info p {
-    font-size: 1.6rem;
-    font-weight: 400;
-    max-height: 100px;
-    margin: auto;
+.timeline-item:nth-child(odd) { padding-right: calc(50% + 30px); text-align: right;
 }
+.timeline-item:nth-child(even){ padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+height: 21px;
+width: 21px;
+background-color: var(--main-color);
+box-shadow: 0 0 25px var(--main-color), 0050px var(--main-color);
+position: absolute;
+left: calc(50% - 8px);
+border-radius: 50%;
+top: 10px;
+}
+.timeline-date{
+font-size: 20px;
+font-weight: 800;
+color: white;
+margin: 6px 0 15px
+}
+.timeline-content{
+background-color: var(--bg-color);
+border: 3px solid var(--main-color);
+padding: 30px 50px;
+border-radius: 4rem;
+box-shadow: 0 0 10px var(--main-color);
+cursor: pointer;
+transition: 0.3s ease-in-out;
+}
+.timeline-content:hover{
+transform: scale(1.05);
+box-shadow: 0 0 25px var(--main-color);
+}
+.timeline-content h3{ 
+font-size: 20px;
+color: white;
+margin: 0 0 10px;
+font-weight: 500;
+}
+.timeline-content p{
+color: white;
+font-size: 16px;
+font-weight: 300;
+line-height: 22px;
+}
+
+.projects{
+background: var(--second-bg-color);
+}
+.projects-box{
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.projects.heading{
+margin-bottom: 5rem;
+}
+.projects-box img{
+width: 15rem;
+border-radius: 50%;
+border: 3px solid var(--main-color);
+box-shadow: 0 0 25px var(--main-color);
+}
+.wrapper{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 3rem;
+}
+.project-item{
+min-height: 550px;
+max-width: 450px;
+background: rgba(0, 0, 0, 0.7);
+border: 3px solid rgba(238, 238, 238, 0.2);
+border-radius: 2rem;
+margin: 0 2rem;
+padding: 30px 60px;
+cursor: pointer;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+gap: 1.5rem;
+color: white;
+transition: 0.4s ease-in-out;
+}
+.project-item:hover{
+border: 3px solid var(--main-color);
+transform: translateY(-10px) scale(1.03);
+box-shadow: 0050px var(--main-color);
+}
+.project-item h2{
+font-size: 2.8rem;
+}
+.project-item p{
+font-size: 1.3rem;
+}
+
+
+
+
 
 
 .library {
@@ -339,7 +431,7 @@ span {
     align-items: center;
     gap: 2.5rem;
 }
-.book-box {
+.library-box {
     background-color: var(--main-color);
     color: black;
     height: 250px;
@@ -347,12 +439,12 @@ span {
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-.book-box:hover {
+.library-box:hover {
     background: black;
     color: var(--main-color);
     transform: scale(1.03);
 }
-.book-box .book-info {
+.library-box .library-info {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -361,12 +453,61 @@ span {
     align-items: baseline;
     padding: 5em;
 }
-.book-info h4 {
+.library-info h4 {
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
 }
-.book-info p {
+.library-info p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    max-height: 100px;
+    margin: auto;
+}
+
+
+.notes {
+    background: var(--bg-color);
+    color: white;
+}
+.notes h2 {
+    margin-bottom: 5rem;
+    color: white;
+}
+.notes-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.notes-box {
+    background-color: var(--main-color);
+    color: black;
+    height: 250px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.notes-box:hover {
+    background: black;
+    color: var(--main-color);
+    transform: scale(1.03);
+}
+.notes-box .notes-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: center; 
+    align-items: baseline;
+    padding: 5em;
+}
+.notes-info h4 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.notes-info p {
     font-size: 1.6rem;
     font-weight: 400;
     max-height: 100px;
@@ -483,12 +624,12 @@ resize: none;
 html{
 font-size: 55%;
 }
-.projects-container{
+.library-container{
 padding-bottom: 7rem;
 grid-template-columns: repeat(2,1fr);
 margin: 0 5rem;
 }
-.library-container{
+.notes-container{
 padding-bottom: 7rem;
 grid-template-columns: repeat(2,1fr);
 margin: 0 5rem;
@@ -500,10 +641,28 @@ padding: 2rem 3%;
 section{
 padding: 10rem 3% 2rem;
 }
-.projects{
+.timeline-items::before{
+left: 7px;
+}
+.timeline-item:nth-child(odd) {
+padding-right: 0;
+text-align: left;
+}
+.timeline-item:nth-child(odd),
+.timeline-item:nth-child(even) {
+padding-left: 37px;
+}
+.timeline-dot{ left: 0;
+}
+
+.projects .wrapper{
+    grid-template-columns: repeat(1,1fr);
+}
+
+.library{
 padding-bottom: 7rem;
 }
-.library{
+.notes{
 padding-bottom: 7rem;
 }
 .footer{
@@ -562,17 +721,17 @@ width: 52vw;
 margin-top: 1rem;
 margin-bottom: 3rem;
 }
-.projects h2{
-margin-bottom: 3rem;
-}
-.projects-container{
-grid-template-columns: repeat(1,1fr);
-}
-}
 .library h2{
 margin-bottom: 3rem;
 }
 .library-container{
+grid-template-columns: repeat(1,1fr);
+}
+}
+.notes h2{
+margin-bottom: 3rem;
+}
+.notes-container{
 grid-template-columns: repeat(1,1fr);
 }
 
