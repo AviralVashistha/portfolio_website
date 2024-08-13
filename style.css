@@ -407,34 +407,39 @@ font-size: 1.3rem;
 }
 
 
-.notes {
+
+
+
+
+
+.note {
     background: var(--bg-color);
     color: white;
 }
-.notes h2 {
+.note h2 {
     margin-bottom: 5rem;
     color: white;
 }
-.notes-container {
+.note-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
     gap: 2.5rem;
 }
-.notes-box {
+.note-box {
     background-color: var(--main-color);
     color: black;
-    height: 250px;
+    height: 150px;
     border-radius: 3rem;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-.notes-box:hover {
+.note-box:hover {
     background: black;
     color: var(--main-color);
     transform: scale(1.03);
 }
-.notes-box .notes-info {
+.note-box .note-info {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -443,17 +448,23 @@ font-size: 1.3rem;
     align-items: baseline;
     padding: 5em;
 }
-.notes-info h4 {
+.note-info h4 {
     font-size: 2.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
 }
-.notes-info p {
+.note-info p {
     font-size: 1.6rem;
     font-weight: 400;
     max-height: 100px;
     margin: auto;
 }
+
+
+
+
+
+
 
 .contact{
 background-color: var(--second-bg-color);
@@ -487,6 +498,23 @@ resize: none;
 }
 .contact form .btn{
     margin-top: 2rem;
+    color: var(--second-bg-color);
+    background-color:var(--main-color) ;
+    border: none;
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.6em;;
+    cursor: pointer;
+    transition: shadow 1s;
+}
+
+.contact form .btn:hover{
+    color: white;
+    transform: scale(1) translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
 }
 
 
